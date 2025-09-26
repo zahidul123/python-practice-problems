@@ -4,6 +4,7 @@
 #-   **Hint**: Use `OrderedDict` or create a custom class with a doubly linked list.
 
 from collections import OrderedDict as OD
+
 class LRUCache:
     def __init__(self, capacity: int):
         self.cache = OD()
@@ -22,7 +23,8 @@ class LRUCache:
         self.cache[key] = value
         if len(self.cache) > self.capacity:
             self.cache.popitem(last=False)
-# Example usage:
+
+
 lru_cache = LRUCache(2)
 lru_cache.put(1, 1)  # cache is {1=1}
 lru_cache.put(2, 2)  # cache is {1=1, 2=2}

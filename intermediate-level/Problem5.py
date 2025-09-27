@@ -4,6 +4,10 @@
 #-   **Output**: `12586269025`
 #-   **Hint**: Use `@lru_cache` from `functools`.
 
+
+#NB: I cannot understand the problem properly but i have thought that you want next fibonacci number after 50
+# So i have implement that way
+
 from functools import lru_cache
 
 @lru_cache(maxsize=None)
@@ -12,11 +16,5 @@ def fibonacci(n: int) -> int:
         return n
     return fibonacci(n - 1) + fibonacci(n - 2)
 
-# Test case
-print(fibonacci(50))  # Output: 12586269025
 
-# Create a function that take a number and print fibonacci series up to that number
-def fibonacci_series(n: int):
-    series = [fibonacci(i) for i in range(n)]
-    return series
-print(fibonacci_series(5)) 
+print(fibonacci(50))  # Output: 12586269025

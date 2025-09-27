@@ -10,5 +10,5 @@ def is_valid_email(email: str) -> bool:
     return re.match(pattern, email) is not None
 
 # Test cases
-print(is_valid_email("rest@gmail.com,"))
+print(is_valid_email("rest@gmail.com"))
 
